@@ -1,15 +1,16 @@
 package com.mad.customer.Adapters;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.mad.customer.UI.Confirm;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.mad.customer.R;
+import com.mad.customer.UI.Confirm;
 
 import java.util.ArrayList;
 

@@ -1,5 +1,29 @@
 package com.mad.customer.UI;
 
+import android.Manifest;
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.icu.text.SimpleDateFormat;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.google.android.gms.common.api.Status;
@@ -9,40 +33,13 @@ import com.google.android.libraries.places.api.net.PlacesClient;
 import com.google.android.libraries.places.widget.Autocomplete;
 import com.google.android.libraries.places.widget.AutocompleteActivity;
 import com.google.android.libraries.places.widget.model.AutocompleteActivityMode;
-import com.mad.customer.R;
-import com.mad.mylibrary.User;
-
-import static com.mad.customer.R.color.colorPrimary;
-import static com.mad.mylibrary.SharedClass.*;
-
-import android.Manifest;
-import android.app.ProgressDialog;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.database.Cursor;
-import android.icu.text.SimpleDateFormat;
-import android.net.Uri;
-import android.os.Environment;
-import android.provider.MediaStore;
-import android.support.design.widget.TextInputEditText;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.FileProvider;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.mad.customer.R;
+import com.mad.mylibrary.User;
 
 import java.io.File;
 import java.util.Arrays;
@@ -52,6 +49,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
+
+import static com.mad.mylibrary.SharedClass.Address;
+import static com.mad.mylibrary.SharedClass.CUSTOMER_PATH;
+import static com.mad.mylibrary.SharedClass.CameraOpen;
+import static com.mad.mylibrary.SharedClass.Mail;
+import static com.mad.mylibrary.SharedClass.Name;
+import static com.mad.mylibrary.SharedClass.PERMISSION_GALLERY_REQUEST;
+import static com.mad.mylibrary.SharedClass.Phone;
+import static com.mad.mylibrary.SharedClass.Photo;
+import static com.mad.mylibrary.SharedClass.ROOT_UID;
 
 public class SignUp extends AppCompatActivity {
     private boolean dialog_open = false;

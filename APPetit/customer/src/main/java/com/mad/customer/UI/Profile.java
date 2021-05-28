@@ -1,22 +1,10 @@
 package com.mad.customer.UI;
 
-import static com.mad.mylibrary.SharedClass.CUSTOMER_PATH;
-import static com.mad.mylibrary.SharedClass.ROOT_UID;
-import static com.mad.mylibrary.SharedClass.user;
-
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.mad.customer.R;
-import com.mad.mylibrary.User;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.support.design.widget.AppBarLayout;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -27,14 +15,24 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.mad.customer.R;
+import com.mad.mylibrary.User;
 
 import java.util.Objects;
+
+import static com.mad.mylibrary.SharedClass.CUSTOMER_PATH;
+import static com.mad.mylibrary.SharedClass.ROOT_UID;
+import static com.mad.mylibrary.SharedClass.user;
 
 /**
  * A simple {@link Fragment} subclass.

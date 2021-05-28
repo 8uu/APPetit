@@ -1,29 +1,14 @@
 package com.mad.customer.UI;
 
-import static com.mad.mylibrary.SharedClass.CUSTOMER_PATH;
-import static com.mad.mylibrary.SharedClass.RESTAURATEUR_INFO;
-import static com.mad.mylibrary.SharedClass.STATUS_DELIVERED;
-import static com.mad.mylibrary.SharedClass.STATUS_DELIVERING;
-import static com.mad.mylibrary.SharedClass.STATUS_DISCARDED;
-import static com.mad.mylibrary.SharedClass.STATUS_UNKNOWN;
-import static com.mad.mylibrary.SharedClass.orderToTrack;
-import static com.mad.mylibrary.SharedClass.orderToTrack;
-import static com.mad.mylibrary.SharedClass.user;
-import static com.mad.mylibrary.SharedClass.ROOT_UID;
-
-import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import androidx.annotation.NonNull;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -33,7 +18,6 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 import com.bumptech.glide.Glide;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -49,6 +33,15 @@ import com.mad.mylibrary.StarItem;
 import com.mad.mylibrary.User;
 
 import java.util.HashMap;
+
+import static com.mad.mylibrary.SharedClass.CUSTOMER_PATH;
+import static com.mad.mylibrary.SharedClass.RESTAURATEUR_INFO;
+import static com.mad.mylibrary.SharedClass.ROOT_UID;
+import static com.mad.mylibrary.SharedClass.STATUS_DELIVERED;
+import static com.mad.mylibrary.SharedClass.STATUS_DELIVERING;
+import static com.mad.mylibrary.SharedClass.STATUS_DISCARDED;
+import static com.mad.mylibrary.SharedClass.orderToTrack;
+import static com.mad.mylibrary.SharedClass.user;
 
 
 

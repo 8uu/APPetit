@@ -1,14 +1,15 @@
 package com.mad.customer.UI;
 
 import android.graphics.Color;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.google.firebase.database.DataSnapshot;
@@ -19,12 +20,17 @@ import com.google.firebase.database.ValueEventListener;
 import com.mad.customer.Adapters.OrderDetailsRecyclerAdapter;
 import com.mad.customer.Items.OrderCustomerItem;
 import com.mad.customer.R;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 
-import static com.mad.mylibrary.SharedClass.*;
+import static com.mad.mylibrary.SharedClass.RESTAURATEUR_INFO;
+import static com.mad.mylibrary.SharedClass.STATUS_DELIVERED;
+import static com.mad.mylibrary.SharedClass.STATUS_DELIVERING;
+import static com.mad.mylibrary.SharedClass.STATUS_DISCARDED;
+import static com.mad.mylibrary.SharedClass.STATUS_UNKNOWN;
 
 
 
